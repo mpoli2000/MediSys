@@ -4,7 +4,29 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        int i =0;
+        Usuario user1 = new Paciente();
+        user1.nombre("Mateo");
+        System.out.println(((Paciente)user1).toString());
+
+        Paciente user2 = new Paciente();
+        System.out.println(user2.toString());
+
+        user1.crearUsuario();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*       int i =0;
         Scanner myscanner = new Scanner(System.in);  // Create a Scanner object
 
         while (i != 3) {
@@ -55,7 +77,7 @@ public class Main {
                 }
                 default ->{}
             }
-        }
+        }*/
     }
 
 }
