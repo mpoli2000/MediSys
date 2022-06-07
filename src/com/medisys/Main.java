@@ -1,83 +1,23 @@
 package com.medisys;
-import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        Usuario user1 = new Paciente();
-        user1.nombre("Mateo");
-        System.out.println(((Paciente)user1).toString());
+    PacienteService pacienteService = new PacienteService();
 
-        Paciente user2 = new Paciente();
-        System.out.println(user2.toString());
+    Paciente paciente = new Paciente();
 
-        user1.crearUsuario();
+    paciente.setId_paciente(3);
+    paciente.setNombre("Gian");
+    paciente.setApellido("Poli");
+    paciente.setEmail("gian@gamil.com");
+    paciente.setClave("");
+    paciente.setDni(42334333);
+    paciente.setObra_social("OSDE");
+    paciente.setNro_afiliado(600003000);
+    paciente.setEstado(true);
 
+    pacienteService.guardarPaciente(paciente);
 
-
-
-
-
-
-
-
-
-
-
-
-
- /*       int i =0;
-        Scanner myscanner = new Scanner(System.in);  // Create a Scanner object
-
-        while (i != 3) {
-
-            System.out.println("Bienvenido al sistema de reserva MediSys");
-            System.out.println("1. Registrarse");
-            System.out.println("2. Ingresar");
-            System.out.println("3. Salir" );
-            System.out.println("Ingrese una opción para continuar:" );
-            i = myscanner.nextInt();  // Read user input
-
-            switch (i) {
-                case 1 -> {
-
-                    while (i !=3 && i !=4) {
-                        System.out.println("Registrar un Medico o un Paciente ?");
-                        System.out.println("1. Medico ");
-                        System.out.println("2. Paciente");
-                        System.out.println("3. Salir");
-                        System.out.println("4. Atras");
-
-                        System.out.println("Seleccione una de las opciones:");
-                        i = myscanner.nextInt();  // ingresar opción
-
-                        switch (i) {
-                            case 1 ->
-                                System.out.println("Crear Medico");
-
-                            case 2 ->
-                                System.out.println("Crear Paciente");
-                            default -> {
-                            }
-                        }
-                    }
-                }
-                case 2 ->{
-                    System.out.println("usuario o email:");
-                    String usuario = myscanner.nextLine();  // ingresar usuario
-                    System.out.println("clave:");
-                    String clave = myscanner.nextLine();  // ingresar clave
-
-                    System.out.println("1. Ok");
-                    System.out.println("2. Cancelar");
-                    System.out.println("3. Salir");
-
-                    //verificar usuario y clave ....
-
-                }
-                default ->{}
-            }
-        }*/
     }
-
 }
