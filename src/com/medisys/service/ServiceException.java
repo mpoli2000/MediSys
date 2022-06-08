@@ -1,4 +1,4 @@
-package com.medisys;
+package com.medisys.service;
 
 public class ServiceException extends Exception {
 

@@ -1,4 +1,10 @@
-package com.medisys;
+package com.medisys.service;
+import com.medisys.dao.DAOException;
+import com.medisys.dao.IPacienteDAO;
+import com.medisys.dao.PacienteDAOH2;
+import com.medisys.entidades.Paciente;
+import com.medisys.service.ServiceException;
+
 import java.util.ArrayList;
 
 public class PacienteService {

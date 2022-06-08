@@ -1,5 +1,9 @@
 package com.medisys;
 
+import com.medisys.entidades.Paciente;
+import com.medisys.service.PacienteService;
+import com.medisys.service.ServiceException;
+
 import java.util.ArrayList;
 
 public class Main {

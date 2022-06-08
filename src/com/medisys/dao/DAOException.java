@@ -1,4 +1,4 @@
-package com.medisys;
+package com.medisys.dao;
 
 public class DAOException extends Exception{
 

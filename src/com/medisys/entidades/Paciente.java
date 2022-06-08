@@ -1,4 +1,4 @@
-package com.medisys;
+package com.medisys.entidades;
 
 public class Paciente{
 

@@ -1,8 +1,12 @@
-package com.medisys;
+package com.medisys.dao;
+import com.medisys.dao.DAOException;
+import com.medisys.dao.IPacienteDAO;
+import com.medisys.entidades.Paciente;
+
 import java.sql.*;
 import java.util.ArrayList;
 
-public class PacienteDAOH2 implements IPacienteDAO{
+public class PacienteDAOH2 implements IPacienteDAO {
 
     private String DB_JDBC_DRIVER = "org.h2.Driver"; //driver base H2
     private String DB_URL = "jdbc:h2:~/MediSys";

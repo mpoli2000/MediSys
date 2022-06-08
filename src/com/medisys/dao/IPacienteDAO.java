@@ -1,4 +1,6 @@
-package com.medisys;
+package com.medisys.dao;
+
+import com.medisys.entidades.Paciente;
 
 import java.util.ArrayList;
 
