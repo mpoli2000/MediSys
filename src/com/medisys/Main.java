@@ -28,7 +28,6 @@ public class Main {
         }
 
         //buscar paciente id=10
-
         try {
             Paciente paciente2 = pacienteService.buscarPaciente(10);
             System.out.println(paciente2);
@@ -43,18 +42,18 @@ public class Main {
             e.printStackTrace();
         }
 
-        //modificar paciente
+        System.out.println("Modificar Paciente:");//modificar paciente
         try {
             Paciente paciente4 = pacienteService.buscarPaciente(2);
             System.out.println(paciente4);
-            paciente4.setEstado(false);
+            paciente4.setEstado(true);
             pacienteService.modificarPaciente(paciente4);
             System.out.println(paciente4);
         } catch (ServiceException e) {
             e.printStackTrace();
         }
 
-        //listar todos los pacientes
+        System.out.println("Listar Pacientes:");//listar todos los pacientes
         ArrayList pacientes = null;
         try {
             pacientes = pacienteService.buscarTodos();
@@ -65,6 +64,7 @@ public class Main {
         } catch (ServiceException e) {
             e.printStackTrace();
         }
+
 
     }
 }

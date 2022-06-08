@@ -64,8 +64,9 @@ public class PacienteDAOH2 implements IPacienteDAO{
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
             //2. preparar sentencia SQL
-            preparedStatement = connection.prepareStatement("UPDATE Pacientes SET nombre=?, SET apellido=?," +
-                            "SET email=?, SET clave=?, SET dni=?, SET obra_social=?, SET nro_afiliado=?, SET estado=?");
+            preparedStatement = connection.prepareStatement("UPDATE Pacientes SET nombre=?, apellido=?," +
+                    " email=?, clave=?, dni=?, obra_social=?, nro_afiliado=?, estado=?" +
+                    "WHERE id_paciente=?");
 
             preparedStatement.setString(1, paciente.getNombre());
             preparedStatement.setString(2, paciente.getApellido());
@@ -75,6 +76,7 @@ public class PacienteDAOH2 implements IPacienteDAO{
             preparedStatement.setString(6, paciente.getObra_social());
             preparedStatement.setInt(7,paciente.getNro_afiliado());
             preparedStatement.setBoolean(8,paciente.isEstado());
+            preparedStatement.setInt(9,paciente.getId_paciente());
 
             //3. ejecutar la sentencia
             int i = preparedStatement.executeUpdate();
@@ -150,6 +152,7 @@ public class PacienteDAOH2 implements IPacienteDAO{
             //evaluamos los resultados
             while (rs.next()){
                 paciente = new Paciente();
+                paciente.setId_paciente(rs.getInt("id_paciente"));
                 paciente.setNombre(rs.getString("nombre"));
                 paciente.setApellido(rs.getString("apellido"));
                 paciente.setEmail(rs.getString("email"));
