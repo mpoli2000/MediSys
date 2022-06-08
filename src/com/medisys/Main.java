@@ -1,5 +1,7 @@
 package com.medisys;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -7,7 +9,7 @@ public class Main {
 
     Paciente paciente = new Paciente();
 
-    paciente.setId_paciente(3);
+    paciente.setId_paciente(10);
     paciente.setNombre("Gian");
     paciente.setApellido("Poli");
     paciente.setEmail("gian@gamil.com");
@@ -17,7 +19,52 @@ public class Main {
     paciente.setNro_afiliado(600003000);
     paciente.setEstado(true);
 
-    pacienteService.guardarPaciente(paciente);
+        //guardar paciente
+        try {
+            pacienteService.guardarPaciente(paciente);
+            System.out.println(paciente);
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
+
+        //buscar paciente id=10
+
+        try {
+            Paciente paciente2 = pacienteService.buscarPaciente(10);
+            System.out.println(paciente2);
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
+
+        //eliminar paciente id=10
+        try {
+            pacienteService.eliminarPaciente(10);
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
+
+        //modificar paciente
+        try {
+            Paciente paciente4 = pacienteService.buscarPaciente(2);
+            System.out.println(paciente4);
+            paciente4.setEstado(false);
+            pacienteService.modificarPaciente(paciente4);
+            System.out.println(paciente4);
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
+
+        //listar todos los pacientes
+        ArrayList pacientes = null;
+        try {
+            pacientes = pacienteService.buscarTodos();
+            for (Object objeto : pacientes) {
+                Paciente paciente3 = (Paciente) objeto;
+                System.out.println(paciente3);
+            }
+        } catch (ServiceException e) {
+            e.printStackTrace();
+        }
 
     }
 }
