@@ -8,6 +8,7 @@ public class Paciente{
     private String email;
     private String clave;
     private int dni;
+    private int id_obra_social;
     private String obra_social;
     private int nro_afiliado;
     private boolean estado;
@@ -82,6 +83,14 @@ public class Paciente{
 
     public void setEstado(boolean estado) {
         this.estado = estado;
+    }
+
+    public int getId_obra_social() {
+        return id_obra_social;
+    }
+
+    public void setId_obra_social(int id_obra_social) {
+        this.id_obra_social = id_obra_social;
     }
 
     @Override

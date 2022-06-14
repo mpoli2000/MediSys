@@ -1,11 +1,14 @@
+DROP TABLE Pacientes;
+
 CREATE TABLE Pacientes (
 id_paciente INT PRIMARY KEY,
-nombre VARCHAR(30) NOT NULL,
-apellido VARCHAR(30) NOT NULL,
+nombre VARCHAR(200) NOT NULL,
+apellido VARCHAR(200) NOT NULL,
 email VARCHAR(200) NOT NULL,
-clave VARCHAR(30) NOT NULL,
+clave VARCHAR(200) NOT NULL,
 dni INT,
-obra_social VARCHAR(30),
+id_obra_social INT,
+obra_social VARCHAR(200),
 nro_afiliado INT,
 estado BIT NOT NULL
 );

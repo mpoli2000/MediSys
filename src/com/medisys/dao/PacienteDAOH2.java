@@ -26,16 +26,17 @@ public class PacienteDAOH2 implements IPacienteDAO {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
 
             //2. preparar sentencia SQL
-            preparedStatement = connection.prepareStatement("INSERT INTO Pacientes VALUES (?,?,?,?,?,?,?,?,?)");
+            preparedStatement = connection.prepareStatement("INSERT INTO Pacientes VALUES (?,?,?,?,?,?,?,?,?,?)");
             preparedStatement.setInt(1, paciente.getId_paciente());
             preparedStatement.setString(2, paciente.getNombre());
             preparedStatement.setString(3, paciente.getApellido());
             preparedStatement.setString(4,paciente.getEmail());
             preparedStatement.setString(5, paciente.getClave());
             preparedStatement.setInt(6, paciente.getDni());
-            preparedStatement.setString(7, paciente.getObra_social());
-            preparedStatement.setInt(8,paciente.getNro_afiliado());
-            preparedStatement.setBoolean(9,paciente.isEstado());
+            preparedStatement.setInt(7, paciente.getId_obra_social());
+            preparedStatement.setString(8, paciente.getObra_social());
+            preparedStatement.setInt(9,paciente.getNro_afiliado());
+            preparedStatement.setBoolean(10,paciente.isEstado());
 
             //3. ejecutar la sentencia
             int i = preparedStatement.executeUpdate();
