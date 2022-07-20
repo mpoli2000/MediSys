@@ -1,27 +1,36 @@
 package com.medisys.entidades;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
 
-public class Turno {
+public class Turno implements Entidad {
+    private int id_turno;
+    private LocalDateTime fecha_turno;
     private int id_consultorio;
-    private LocalDate fecha;
-    private LocalTime hora;
+    private String consultorio;
     private int id_medico;
+    private String medico;
     private String os_medico;
     private int id_paciente;
+    private String paciente;
     private String os_paciente;
-    private int monto;
-    private int descuento;
+    private int honorario;
+    private float descuento;
     private float saldo;
 
-    public Turno(LocalDate fecha, LocalTime hora) {
-        this.fecha = fecha;
-        this.hora = hora;
+    public int getId_turno() {
+        return id_turno;
     }
 
-    public Turno() {
-        this.fecha = LocalDate.now();
+    public void setId_turno(int id_turno) {
+        this.id_turno = id_turno;
+    }
+
+    public LocalDateTime getFecha_turno() {
+        return fecha_turno;
+    }
+
+    public void setFecha_turno(LocalDateTime fecha_turno) {
+        this.fecha_turno = fecha_turno;
     }
 
     public int getId_consultorio() {
@@ -32,20 +41,12 @@ public class Turno {
         this.id_consultorio = id_consultorio;
     }
 
-    public LocalDate getFecha() {
-        return fecha;
+    public String getConsultorio() {
+        return consultorio;
     }
 
-    public void setFecha(LocalDate fecha) {
-        this.fecha = fecha;
-    }
-
-    public LocalTime getHora() {
-        return hora;
-    }
-
-    public void setHora(LocalTime hora) {
-        this.hora = hora;
+    public void setConsultorio(String consultorio) {
+        this.consultorio = consultorio;
     }
 
     public int getId_medico() {
@@ -54,6 +55,14 @@ public class Turno {
 
     public void setId_medico(int id_medico) {
         this.id_medico = id_medico;
+    }
+
+    public String getMedico() {
+        return medico;
+    }
+
+    public void setMedico(String medico) {
+        this.medico = medico;
     }
 
     public String getOs_medico() {
@@ -72,6 +81,14 @@ public class Turno {
         this.id_paciente = id_paciente;
     }
 
+    public String getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(String paciente) {
+        this.paciente = paciente;
+    }
+
     public String getOs_paciente() {
         return os_paciente;
     }
@@ -80,19 +97,19 @@ public class Turno {
         this.os_paciente = os_paciente;
     }
 
-    public int getMonto() {
-        return monto;
+    public int getHonorario() {
+        return honorario;
     }
 
-    public void setMonto(int monto) {
-        this.monto = monto;
+    public void setHonorario(int honorario) {
+        this.honorario = honorario;
     }
 
-    public int getDescuento() {
+    public float getDescuento() {
         return descuento;
     }
 
-    public void setDescuento(int descuento) {
+    public void setDescuento(float descuento) {
         this.descuento = descuento;
     }
 
@@ -106,15 +123,18 @@ public class Turno {
 
     @Override
     public String toString() {
-        return "Turnos{" +
-                "id_consultorio=" + id_consultorio +
-                ", fecha=" + fecha +
-                ", hora=" + hora +
+        return "Turno{" +
+                "id_turno=" + id_turno +
+                ", fecha_turno=" + fecha_turno +
+                ", id_consultorio=" + id_consultorio +
+                ", consultorio='" + consultorio + '\'' +
                 ", id_medico=" + id_medico +
+                ", medico='" + medico + '\'' +
                 ", os_medico='" + os_medico + '\'' +
                 ", id_paciente=" + id_paciente +
+                ", paciente='" + paciente + '\'' +
                 ", os_paciente='" + os_paciente + '\'' +
-                ", monto=" + monto +
+                ", honorarios=" + honorario +
                 ", descuento=" + descuento +
                 ", saldo=" + saldo +
                 '}';

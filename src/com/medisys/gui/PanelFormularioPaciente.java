@@ -55,11 +55,8 @@ public class PanelFormularioPaciente extends JPanel{
         jTextFieldApellido.setText(paciente.getApellido());
         jTextFieldEmail.setText(paciente.getEmail());
         jPasswordFieldClave.setText(paciente.getClave());
-        jTextFieldDni.setText(String.valueOf(paciente.getDni()));
         jTextFieldIdObraSocial.setText(String.valueOf(paciente.getId_obra_social()));
-        jTextFieldObraSocial.setText(paciente.getObra_social());
-        jTextFieldNroAfiliado.setText(String.valueOf(paciente.getNro_afiliado()));
-        jTextFieldEstado.setText(String.valueOf(paciente.isEstado()));
+
         modificacion = true;
     }
 
@@ -145,11 +142,8 @@ public class PanelFormularioPaciente extends JPanel{
                 paciente.setApellido(jTextFieldApellido.getText());
                 paciente.setEmail(jTextFieldEmail.getText());
                 paciente.setClave(jPasswordFieldClave.getText());
-                paciente.setDni(Integer.parseInt(jTextFieldDni.getText()));
                 paciente.setId_obra_social(Integer.parseInt(jTextFieldIdObraSocial.getText()));
-                paciente.setObra_social(jTextFieldObraSocial.getText());
-                paciente.setNro_afiliado(Integer.parseInt(jTextFieldNroAfiliado.getText()));
-                paciente.setEstado(Boolean.parseBoolean(jTextFieldEstado.getText()));
+
 
                 PacienteService pacienteService = new PacienteService();
                 try {

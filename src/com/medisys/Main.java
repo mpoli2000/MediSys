@@ -14,7 +14,7 @@ public class Main {
     PacienteService pacienteService = new PacienteService();
 
     Paciente paciente = new Paciente();
-    Turno turno = new Turno(LocalDate.of(2022,3,12), LocalTime.of(13,0,0));
+    //Turno turno = new Turno(LocalDate.of(2022,3,12), LocalTime.of(13,0,0));
     Object pepe = new ObraSocial();
 
 
@@ -23,11 +23,7 @@ public class Main {
     paciente.setApellido("Poli");
     paciente.setEmail("gian@gamil.com");
     paciente.setClave("");
-    paciente.setDni(42334333);
     paciente.setId_obra_social(2323);
-    paciente.setObra_social("OSDE");
-    paciente.setNro_afiliado(600003000);
-    paciente.setEstado(true);
 
         //guardar paciente
         try {

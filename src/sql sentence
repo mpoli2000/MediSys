@@ -3,14 +3,59 @@ DROP TABLE Pacientes;
 CREATE TABLE Pacientes (
 id_paciente INT PRIMARY KEY,
 nombre VARCHAR(200) NOT NULL,
+apellido VARCHAR(200) NULL,
+email VARCHAR(200) NOT NULL,
+clave VARCHAR(200) NOT NULL,
+id_obra_social INT NOT NULL,
+obra_social VARCHAR(200) NOT NULL
+);
+
+CREATE TABLE Medicos (
+id_medico INT PRIMARY KEY,
+nombre VARCHAR(200) NOT NULL,
 apellido VARCHAR(200) NOT NULL,
 email VARCHAR(200) NOT NULL,
 clave VARCHAR(200) NOT NULL,
-dni INT,
-id_obra_social INT,
-obra_social VARCHAR(200),
-nro_afiliado INT,
-estado BIT NOT NULL
+id_obra_social INT NOT NULL,
+obra_social VARCHAR(200) NOT NULL
 );
+
+CREATE TABLE Obras_sociales (
+id_obra_social INT PRIMARY KEY,
+nombre VARCHAR(200)
+);
+
+CREATE TABLE Consultorios (
+id_consultorio INT PRIMARY KEY,
+nombre VARCHAR(200)
+);
+
+CREATE TABLE Recursos(
+id_recursos INT PRIMARY KEY,
+dia INT NOT NULL,
+id_consultorio INT NOT NULL,
+consultorio VARCHAR(200) NULL,
+id_medico INT NULL,
+medico VARCHAR(200) NULL,
+fecha_inicial DATE,
+fecha_final DATE
+);
+
+CREATE TABLE Turnos(
+id_turno INT PRIMARY KEY,
+fecha_turno DATETIME,
+id_consultorio INT,
+consultorio VARCHAR(200) NOT NULL,
+id_medico INT,
+medico VARCHAR(200),
+os_medico VARCHAR(200),
+id_paciente INT NULL,
+paciente VARCHAR(200) NULL,
+os_paciente VARCHAR(200) NULL,
+honorario INT NULL,
+descuento FLOAT NULL,
+saldo FLOAT NULL,
+);
+
 
 SELECT * FROM PACIENTES

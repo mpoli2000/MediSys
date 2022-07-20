@@ -1,17 +1,21 @@
 package com.medisys.entidades;
 
-public class Medico {
+public class Medico implements Entidad {
     private int id_medico;
     private String nombre;
     private String apellido;
     private String email;
     private String clave;
-    private int dni;
-    private int matricula;
-    private String especialidad;
     private int id_obra_social;
     private String obra_social;
-    private boolean estado;
+
+    public String getObra_social() {
+        return obra_social;
+    }
+
+    public void setObra_social(String obra_social) {
+        this.obra_social = obra_social;
+    }
 
     public int getId_medico() {
         return id_medico;
@@ -53,30 +57,6 @@ public class Medico {
         this.clave = clave;
     }
 
-    public int getDni() {
-        return dni;
-    }
-
-    public void setDni(int dni) {
-        this.dni = dni;
-    }
-
-    public int getMatricula() {
-        return matricula;
-    }
-
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
-    }
-
-    public String getEspecialidad() {
-        return especialidad;
-    }
-
-    public void setEspecialidad(String especialidad) {
-        this.especialidad = especialidad;
-    }
-
     public int getId_obra_social() {
         return id_obra_social;
     }
@@ -85,21 +65,6 @@ public class Medico {
         this.id_obra_social = id_obra_social;
     }
 
-    public String getObra_social() {
-        return obra_social;
-    }
-
-    public void setObra_social(String obra_social) {
-        this.obra_social = obra_social;
-    }
-
-    public boolean isEstado() {
-        return estado;
-    }
-
-    public void setEstado(boolean estado) {
-        this.estado = estado;
-    }
 
     @Override
     public String toString() {
@@ -109,12 +74,8 @@ public class Medico {
                 ", apellido='" + apellido + '\'' +
                 ", email='" + email + '\'' +
                 ", clave='" + clave + '\'' +
-                ", dni=" + dni +
-                ", matricula=" + matricula +
-                ", especialidad='" + especialidad + '\'' +
                 ", id_obra_social=" + id_obra_social +
                 ", obra_social='" + obra_social + '\'' +
-                ", estado=" + estado +
                 '}';
     }
 }

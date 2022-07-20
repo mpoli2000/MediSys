@@ -67,11 +67,8 @@ public class PanelListaPacientes extends JPanel {
             row[2] = paciente.getApellido();
             row[3] = paciente.getEmail();
             row[4] = paciente.getClave();
-            row[5] = paciente.getDni();
-            row[6] = paciente.getId_obra_social();
-            row[7] = paciente.getObra_social();
-            row[8] = paciente.getNro_afiliado();
-            row[9] = paciente.isEstado();
+            row[5] = paciente.getId_obra_social();
+
 
             contenidoTabla.addRow(row);
         }

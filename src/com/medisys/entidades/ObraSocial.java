@@ -1,16 +1,16 @@
 package com.medisys.entidades;
 
-public class ObraSocial {
+public class ObraSocial implements Entidad {
 
-    private int obra_social;
+    private int id_obra_social;
     private String nombre;
 
-    public int getObra_social() {
-        return obra_social;
+    public int getId_obra_social() {
+        return id_obra_social;
     }
 
-    public void setObra_social(int obra_social) {
-        this.obra_social = obra_social;
+    public void setId_obra_social(int id_obra_social) {
+        this.id_obra_social = id_obra_social;
     }
 
     public String getNombre() {
@@ -24,7 +24,7 @@ public class ObraSocial {
     @Override
     public String toString() {
         return "ObraSocial{" +
-                "obra_social=" + obra_social +
+                "id_obra_social=" + id_obra_social +
                 ", nombre='" + nombre + '\'' +
                 '}';
     }

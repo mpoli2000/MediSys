@@ -1,0 +1,60 @@
+ //PanelManager panelManager = new PanelManager();
+        //panelManager.armarPanelManager();
+        //panelManager.mostrarListaPacientes();
+
+//        Entidad entidad = new Turno();
+//
+//        Turno ent;
+//        ent= ((Turno)entidad);
+//
+//        ent.setId_turno(3);
+//        ent.setFecha_turno(LocalDateTime.of(2022,07,19,10,00));
+//        ent.setId_consultorio(1);
+//        ent.setConsultorio("");
+//        ent.setId_medico(1);
+//        ent.setMedico("");
+//        ent.setOs_medico("OSDE");
+//        ent.setId_paciente(1);
+//        ent.setPaciente("");
+//        ent.setOs_paciente("OSDE");
+//        ent.setHonorario(1000);
+//        ent.setDescuento(0.5F);
+//        ent.setSaldo(500);
+//
+//        ent.setId_medico(3);
+//        ent.setNombre("medico1");
+//        ent.setApellido("");
+//        ent.setEmail("m1@");
+//        ent.setClave("m1");
+//        ent.setId_obra_social(1);
+//        ent.setObra_social("PARTICULAR");
+
+//        ent.setId_consultorio(3);
+//        ent.setNombre("JURAMENTO");
+
+
+//        ent.setId_obra_social(101);
+//        ent.setNombre("Pepe");
+//
+//        ent.setId_recurso(13);
+//        ent.setDia(1);
+//        ent.setId_consultorio(3);
+//        ent.setConsultorio("LAS LOMAS");
+//        ent.setId_medico(0);
+//        ent.setMedico("");
+//        ent.setFecha_inicial(LocalDate.of(2022,07,19));
+//        ent.setFecha_final(LocalDate.of(2022,07,31));
+
+
+//        EntidadService entidadService = new EntidadService(entidad);
+//        try {
+// //      entidadService.guardar();
+//     //       entidadService.modificar();
+////        entidadService.eliminar(3);
+//    //     System.out.println(entidadService.buscar(3));
+//        System.out.println(entidadService.buscarTodos());
+//
+//        } catch (ServiceException e) {
+//            e.printStackTrace();
+//        }
+//

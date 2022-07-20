@@ -1,6 +1,6 @@
 package com.medisys.entidades;
 
-public class Consultorio {
+public class Consultorio implements Entidad{
 
     private int id_consultorio;
     private String nombre;
